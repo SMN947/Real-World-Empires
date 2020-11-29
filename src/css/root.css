@@ -1,18 +1,18 @@
- .hidden {
-      display: none;
-    }
-    .portrait {
-      display: none;
-    }
-    html, body, #map {
-      width: 100%;
-      height: 100vh;
-      padding: 0px;
-      margin: 0px;
-    }
-    #container {
-      display: block;
-    }
+.hidden {
+  display: none;
+}
+.portrait {
+  display: none;
+}
+html, body, #map {
+  width: 100%;
+  height: 50vh;
+  padding: 0px;
+  margin: 0px;
+}
+#container {
+  display: block;
+}
 /*@media only screen and (orientation:portrait) {
       #mapid {
         display: none;
