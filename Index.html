@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="" content="">
+  <title>Real World Empires</title>
+  <link rel="stylesheet" href="./src/lealeft/leaflet.css">
+  <link rel="stylesheet" href="./src/css/root.css" type="text/css" media="all" />
+  <script src="./src/lealeft/leaflet.js"></script>
+  <script src="./src/js/game.js" type="text/javascript" charset="utf-8"></script>
+
+  <script src="./src/js/index.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body id="container">
+  <div class="portrait hidden">
+    <h1>rotate your device</h1>
+  </div>
+  <div id="map"></div>
+  <script type="text/javascript" charset="utf-8">
+    window.onload = function() {
+      var startPos;
+      var geoOptions = {
+        timeout: 10 * 1000
+      }
+
+      var geoSuccess = function(position) {
+        startPos = position;
+        document.getElementById('startLat').innerHTML = startPos.coords.latitude;
+        document.getElementById('startLon').innerHTML = startPos.coords.longitude;
+      };
+      var geoError = function(error) {
+        console.log('Error occurred. Error code: ' + error.code);
+        // error.code can be:
+        //   0: unknown error
+        //   1: permission denied
+        //   2: position unavailable (error response from location provider)
+        //   3: timed out
+      };
+
+      navigator.geolocation.getCurrentPosition(geoSuccess, geoError, geoOptions);
+    };
+  </script>
+</body>
+</html>
