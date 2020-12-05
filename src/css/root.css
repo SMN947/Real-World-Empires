@@ -11,49 +11,51 @@ html, body, #map {
   margin: 0px;
 }
 #map {
-  z-index: -1;
+  z-index: 1;
 }
 #container {
   display: block;
 }
 .profile {
-  position:absolute;
-  border:solid blue 1px;
+  z-index: 2;
+  position: absolute;
   width: 30vw;
+  height: 7vh;
   left: 1vw;
   top: 1vw;
 }
 .profile .picture img {
   border-radius: 50%;
-  width: 6vw;
+  width: 16vw;
 }
 .bars {
-  margin-top: -6vw;
+  margin-top: -1vw;
   margin-left: 5vw;
 }
 .exp {
-  border:solid green 1px;
+  height: 2vw;
+  border: solid green 1px;
   border-radius: 0px 20px 0px 0px;
 }
 .power {
-  border:solid purple 1px;
+  height: 2vw;
+  border: solid purple 1px;
   border-radius: 0px 0px 20px 0px;
 }
-/*@media only screen and (orientation:portrait) {
-      #mapid {
-        display: none;
-      }
-      .portrait {
-        display: block
-      }
-    }
+@media only screen and (orientation:landscape) {
+  #mapid {
+    display: none;
+  }
+  .portrait {
+    display: block
+  }
+}
 
-@media only screen and (orientation:landscapr) {
-      #mapid {
-        display: block;
-      }
-      .portrait {
-        display: none;
-      }
-    }
-*/
+@media only screen and (orientation:portrait) {
+  #mapid {
+    display: block;
+  }
+  .portrait {
+    display: none;
+  }
+}
