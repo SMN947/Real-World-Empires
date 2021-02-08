@@ -1,0 +1,13 @@
+:host ::ng-deep {
+    .card-col {
+        width: calc(100% - 1em);
+        margin: 0 0.5rem;
+    }
+    .card-row {
+        margin: 0 -0.5em;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+        grid-auto-rows: minmax(100px, auto);
+      }
+}
